@@ -27,6 +27,7 @@ class rsnapshot::params {
 
   $server_log_path = '/var/log/rsnapshot'
   $server_config_path = '/etc/rsnapshot'
+  $server_config_path_purge = false
   $server_backup_path = '/backups/rsnapshot'
 
   $cmd_preexec = undef

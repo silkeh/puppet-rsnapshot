@@ -37,6 +37,7 @@
 #
 class rsnapshot::server(
   $config_path = $rsnapshot::params::server_config_path,
+  $config_path_purge = $rsnapshot::params::server_config_path_purge,
   $backup_path = $rsnapshot::params::server_backup_path,
   $log_path = $rsnapshot::params::server_log_path,
   $lock_path = $rsnapshot::params::lock_path,
@@ -64,6 +65,7 @@ class rsnapshot::server(
   # Add config path
   file { $config_path :
     ensure => directory,
+    purge  => $config_path_purge,
     owner  => $server_user,
     group  => $server_user
   }->

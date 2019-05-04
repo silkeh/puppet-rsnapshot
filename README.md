@@ -145,6 +145,7 @@ class { 'rsnapshot::server':
   config_path            => '/etc/rsnapshot',
   backup_path            => '/backups/rsnapshot',
   log_path               => '/var/log/rsnapshot',
+  config_path_purge      => false,
   user                   => 'root',
   no_create_root         => 0,
   verbose                => 2,
